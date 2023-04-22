@@ -1,0 +1,34 @@
+{
+   "branchConcurrentLimit": 0,
+   "extends": [
+      "config:base"
+   ],
+   "prConcurrentLimit": 0,
+   "prHourlyLimit": 0,
+   "regexManagers": [
+      {
+         "datasourceTemplate": "github-releases",
+         "extractVersionTemplate": "^bar_(?<version>v\\d+\\.\\d+\\.\\d+(?:-\\d+)?)$",
+         "fileMatch": [
+            "^foo\\.txt$"
+         ],
+         "matchStrings": [
+            "bar: (?<currentValue>v\\d+\\.\\d+\\.\\d+)"
+         ],
+         "packageNameTemplate": "suzuki-shunsuke/reproduction-code-renovate-monorepo",
+         "depNameTemplate": "suzuki-shunsuke/reproduction-code-renovate-monorepo/bar"
+      },
+      {
+         "datasourceTemplate": "github-releases",
+         "extractVersionTemplate": "^foo_(?<version>v\\d+\\.\\d+\\.\\d+(?:-\\d+)?)$",
+         "fileMatch": [
+            "^foo\\.txt$"
+         ],
+         "matchStrings": [
+            "foo: (?<currentValue>v\\d+\\.\\d+\\.\\d+)"
+         ],
+         "packageNameTemplate": "suzuki-shunsuke/reproduction-code-renovate-monorepo",
+         "depNameTemplate": "suzuki-shunsuke/reproduction-code-renovate-monorepo/foo"
+      }
+   ]
+}
